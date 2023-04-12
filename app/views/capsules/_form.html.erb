@@ -6,7 +6,7 @@
   <div class="form-inputs">
     <%= f.association :charity, label: "Nom de l'organisme" %>
     <%= f.association :need, label: "Domaine" %>
-    <%= f.input :video, label: "Vidéo" %>
+    <%= f.input :video, label: "Vidéo", as: :string %>
     <%= f.input :quote, label: "Citation"%>
     <%= f.input :poster, label: "Photo de couverture" %>
     <%= f.input :first_name, label: "Nom de l'interviewé" , input_html: { class: 'my-class' } %>
@@ -14,6 +14,6 @@
   </div>
 
   <div class="form-actions">
-  <%= f.button :submit, "Valider la capusle " %>
+  <%= f.button :submit, "Enregistrer" %>
   </div>
 <% end %>

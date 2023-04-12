@@ -5,7 +5,7 @@ class CapsulesController < ApplicationController
     I18n.locale = :fr 
   end
 
-  before_action :authenticate_admin!, only: %i[ edit update destroy ]  
+  before_action :authenticate_admin!, only: %i[ new edit update destroy ]  
 
   # GET /capsules or /capsules.json
 
