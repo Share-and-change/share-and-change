@@ -4,9 +4,11 @@
         <div class="footer__wrapper">
             <div class="footer__wrapper__left">
                 <%= render 'nav'%>
-                <% if admin_signed_in? %>
-                    <%= link_to "Déconnexion", destroy_admin_session_path, method: :delete, class:"logout_link" %>
-                <% end %>
+                <%= link_to "Déconnexion", 
+                    destroy_admin_session_path, 
+                    data: { turbo_method: :delete },
+                    method: :delete, 
+                    class:"logout_link" if admin_signed_in? %>
             </div>
             <div class="footer__wrapper__right">
             <p>En collaboration avec </p>

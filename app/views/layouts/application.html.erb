@@ -17,7 +17,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-4BVSCCR3X3');
 </script>
 
@@ -28,7 +27,6 @@
       <%= yield %>
     </main>
     <%= render 'footer' %>
-
-  <%= javascript_include_tag("application") %>
+    <%= javascript_include_tag "application" %>
   </body>
 </html>
