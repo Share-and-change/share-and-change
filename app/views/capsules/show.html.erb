@@ -15,13 +15,15 @@
 <% end %>
 
 <section class="content">
-  <blockquote><h2>&ldquo;<%= @capsule %>&ldquo;</h2></blockquote>
+  <blockquote><h2>&ldquo;<%= @capsule %>&rdquo;</h2></blockquote>
   <h1><%= @capsule.first_name %></h1>
-  <% if @capsule.charity.logo %>
-  <p>Nous parle de <%= image_tag(@capsule.charity.logo) %></p>
-  <% else %>
-  <p>Nous parle de <%= @capsule.charity %></p>
-  <% end %>
+  <p>Nous parle de 
+    <% if @capsule.charity.logo.attached? %>
+      <%= image_tag(@capsule.charity.logo) %>
+    <% else %>
+      <%= @capsule.charity %>
+    <% end %>
+  </p>
 </section>
 
 

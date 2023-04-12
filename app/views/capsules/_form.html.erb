@@ -1,14 +1,13 @@
-
-<%= simple_form_for(@capsule) do |f| %>
+<%= simple_form_for capsule do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
     <%= f.association :charity, label: "Nom de l'organisme" %>
     <%= f.association :need, label: "Domaine" %>
-    <%= f.input :video, label: "Vidéo", as: :string %>
-    <%= f.input :quote, label: "Citation"%>
+    <%= f.input :video, label: "Identifiant Vimeo", as: :string %>
     <%= f.input :poster, label: "Photo de couverture" %>
+    <%= f.input :quote, label: "Citation"%>
     <%= f.input :first_name, label: "Nom de l'interviewé" , input_html: { class: 'my-class' } %>
     <%= f.input :last_name, label: "Prénom de l'interviewé"%>
   </div>

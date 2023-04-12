@@ -6,9 +6,8 @@
 
   <h2 class="charity_header__title"><%= @charity %></h2>
     <div class="charity-logo">
-  <% if @charity.logo %>
-  <%= image_tag(@charity.logo, class: "img_logo") %>
-  <% else %>
+  <% if @charity.logo.attached? %>
+    <%= image_tag(@charity.logo, class: "img_logo") %>
   <% end %>
   </div>
 
