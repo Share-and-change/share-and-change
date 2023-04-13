@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@kit) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :category , label: "Catégorie du kit" %>
+    <%= f.input :name, label: "Nom du kit" %>
+    <%= f.input :description , label: "Description du kit" %>
+    <%= f.input :image , label: "Url de l'image"  %>
+    <%= f.input :pdf , label: "Url du PDF"  %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

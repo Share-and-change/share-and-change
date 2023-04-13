@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :kits
+  resources :categories
   devise_for :admins
   resources :capsules, :charities, :needs
   get 'contact' => 'pages#contact', as: :contact
