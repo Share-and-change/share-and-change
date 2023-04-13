@@ -18,7 +18,6 @@ class NeedsController < ApplicationController
 
   # GET /needs/1 or /needs/1.json
   def show
-    add_breadcrumb "Besoins", needs_path
     add_breadcrumb @need.name, need_path(@need)
   end
 
