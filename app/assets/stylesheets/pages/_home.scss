@@ -62,11 +62,20 @@
     font-size: clamp(var(--min-p-font-size-rem), var(--fluid-font-size-p-rem), var(--max-p-font-size-rem));
 }
 
-.kit_name{
+.kits_name{
     font-family: 'Questrial', sans-serif;
     font-size: 20px;
 
 }
-.kit-img{
+.kits_img{
     max-width: 240px;
+}
+
+.kits_link{
+text-align: end;
+margin-top: 5%;
+    a {
+        font-weight: bold;
+    }
+    
 }

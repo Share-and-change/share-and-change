@@ -5,7 +5,7 @@ class CharitiesController < ApplicationController
     I18n.locale = :fr # Or whatever logic you use to choose.
   end
   
-  before_action :authenticate_admin!, only: %i[ edit update destroy ]
+  before_action :authenticate_admin!, only: %i[ new edit update destroy ]
 
   add_breadcrumb "Accueil", :root_path
 

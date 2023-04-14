@@ -45,13 +45,13 @@
               <% @kits.each do |kit| %>
                 <div class="">
                     <%= link_to kit_path(kit) do %>
-                        <%= image_tag kit.image, class: "kit-img" %>
+                        <%= image_tag kit.image, class: "kits_img" %>
                     <% end %>
-                    <h3 class="kit_name"><%= kit.name %></h3>
+                    <h3 class="kits_name"><%= kit.name %></h3>
                 </div>
               <% end %>
             </div>
-            <div class="capsules_link">
+            <div class="kits_link">
             <%= link_to "+ Tous les kits numériques", kits_path %>
             </div>
 

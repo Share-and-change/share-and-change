@@ -3,6 +3,8 @@ class KitsController < ApplicationController
 
   add_breadcrumb "Accueil", :root_path
 
+  before_action :authenticate_admin!, only: %i[ new edit update destroy ]  
+
   # GET /kits or /kits.json
   def index
     add_breadcrumb "Kits", kits_path
