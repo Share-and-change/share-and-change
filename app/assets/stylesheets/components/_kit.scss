@@ -1,14 +1,11 @@
 .kit__container{
     display: flex;
-
+margin-top: 5%;
     &__image{
 
-        width: 610px;
+       
         img{
-            width: 100%;
-            object-fit: cover;
-        
-
+            width: 610px;
             a:after{
                 background-color: transparent;
             }
