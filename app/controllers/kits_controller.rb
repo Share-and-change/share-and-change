@@ -5,17 +5,21 @@ class KitsController < ApplicationController
 
   # GET /kits or /kits.json
   def index
-    if params[:category_id].present?
-      @category = Category.find(params[:category_id])
-      @kits = @category.kits
-    else
+    add_breadcrumb "Kits", kits_path
+    # if params[:category_id].present?
+    #   @category = Category.find(params[:category_id])
+    #   @kits = @category.kits
+    # else
       @kits = Kit.all
-    end
+    # end
 
   end
 
   # GET /kits/1 or /kits/1.json
   def show
+    add_breadcrumb "Kits numériques", kits_path
+    add_breadcrumb @kit.name, kit_path(@kit)
+
   end
 
   # GET /kits/new

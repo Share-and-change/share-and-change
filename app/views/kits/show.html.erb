@@ -1,10 +1,45 @@
-<p style="color: green"><%= notice %></p>
+<div class="breadcrumb">
+<%= render_breadcrumbs :separator => ' > ' %>
+</div>
 
-<%= render @kit %>
+<h2>Kits numériques </h2>
+
+<div class="kit__container">
+
+  <div class="kit__container__image">
+      <%= image_tag @kit.image, alt:"couverture du kit" %>
+  </div>
+
+  <div class="kit__container__wrapper">
+
+    <div class="kit__container__wrapper__content">
+
+      <h2>
+        <%= @kit.name %>
+      </h2>
+
+      <p>
+        <%= @kit.description %>
+
+      </p>
+
+      </div>
+
+      <%= link_to "Télécharger le PDF", @kit.pdf, target: "_blank" , class:"link_pdf"%>
+
+
+  </div>
+
+
+
 
 <div>
+
+<% if admin_signed_in? %>
   <%= link_to "Edit this kit", edit_kit_path(@kit) %> |
   <%= link_to "Back to kits", kits_path %>
 
   <%= button_to "Destroy this kit", @kit, method: :delete %>
+<% end %>
+
 </div>

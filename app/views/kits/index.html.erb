@@ -1,14 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<div class="breadcrumb">
+<%= render_breadcrumbs :separator => ' > ' %>
+</div>
 
-<h1>Kits</h1>
+<h1>Kits numériques</h1>
 
 <div id="kits">
   <% @kits.each do |kit| %>
-    <%= render kit %>
-    <p>
-      <%= link_to "Show this kit", kit %>
-    </p>
+ <div class="charities_div">
+    <div class="charities_div_wrapper">
+      <%= link_to kit.name, kit, class:"charities_div_a" %>
+      <p class="charities_div_p"><%= kit.description%></p>
+    </div>
+    <%= link_to kit, class:"charities_div_img" do %>
+        <%= image_tag "svg/Vector.svg", class:"charities_div_img" %>
+    <% end %>
+    </div>
   <% end %>
 </div>
-
+<% if admin_signed_in? %>
 <%= link_to "New kit", new_kit_path %>
+  <% end %>
