@@ -6,8 +6,8 @@
                     <div class="hero__text">
                         <p class="hero__text__hello">Bienvenue!</p>
                         <h1 class="hero__text__title">
-                        <span class="font-logo">Share&Change</span> : la parole aux nouveaux arrivants</h1>
-                        <p>Share&Change est une plateforme qui met en avant des témoignages vidéos de nouveaux arrivants racontant leur expérience vis-à-vis d’associations, d’entreprises, ou encore d’institutions qui leur sont venus en aide à Bordeaux. 
+                        <span class="font-logo">Share&Change</span> : la parole aux associations</h1>
+                        <p>Share&Change est une plateforme conçue pour répondre aux besoins essentiels des nouveaux arrivants et des associations, en mettant à disposition des témoignages inspirants et des kits d’utilisation pratiques.
                         </p>
                     </div>
                 </div>
@@ -39,15 +39,14 @@
         </section>
         <section class="home-title">
             <h2>Kits numériques</h2>
-            <p>Vous êtes une association ? <br/>
-            Profitez de kits vous permettant d’apprendre à utiliser une multitude d’outils numériques. </p>
+            <p>Profitez de kits vous permettant d’apprendre à utiliser une multitude d’outils et d’optimiser votre impact en ligne. </p>
             <div>
               <% @kits.each do |kit| %>
-                <div class="">
-                    <%= link_to kit_path(kit) do %>
+                <div class="kits_content">
+                    <%= link_to kit_path(kit), class:"kits_img_a" do %>
                         <%= image_tag kit.image, class: "kits_img" %>
-                    <% end %>
                     <h3 class="kits_name"><%= kit.name %></h3>
+                    <% end %>
                 </div>
               <% end %>
             </div>

@@ -69,6 +69,8 @@
 }
 .kits_img{
     max-width: 240px;
+
+    
 }
 
 .kits_link{
@@ -78,4 +80,20 @@ margin-top: 5%;
         font-weight: bold;
     }
     
+}
+
+.kits_img_a{
+
+    a:after{
+background-color: transparent;
+    }
+}
+
+.kit_content{
+    a{
+        color: aqua;
+    }
+    a:after{
+        background-color: transparent;
+    }
 }

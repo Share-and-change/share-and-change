@@ -7,6 +7,12 @@
         img{
             width: 100%;
             object-fit: cover;
+        
+
+            a:after{
+                background-color: transparent;
+            }
+
     }
 }
     
