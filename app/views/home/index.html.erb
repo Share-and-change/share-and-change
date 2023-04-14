@@ -20,24 +20,41 @@
   <div class="offset-md-1 col-md-11">
         <section class="last-testimonials home-title">
             <h2>Nos derniers témoignages</h2>
-            <div class="capsules">
-              <% @capsules.each do |capsule| %>
-                <%= render capsule %>
-              <% end %>
-              <% if admin_signed_in? %>
-    <p class="link_page"><%= link_to "+ ajouter une vidéo", new_capsule_path(@capsule) %></p>
-<% else %>
-<% end %>
+
+            <div class="capsules_container">
+                <div class="capsules">
+                <% @capsules.each do |capsule| %>
+                    <%= render capsule %>
+                <% end %>
+                <% if admin_signed_in? %>
+                    <p class="link_page"><%= link_to "+ ajouter une vidéo", new_capsule_path(@capsule) %></p>
+                <% end %>
+                </div>
+                <div class="capsules_link">
+                    <%= link_to "+ Tous les témoignages", capsules_path %>
+                </div>
             </div>
+
+
         </section>
         <section class="home-title">
-            <h2>Chaque histoire mérite d’être partagée</h2>
-            <p>Nous apportons des solutions à chaque besoin.</p>
+            <h2>Kits numériques</h2>
+            <p>Vous êtes une association ? <br/>
+            Profitez de kits vous permettant d’apprendre à utiliser une multitude d’outils numériques. </p>
             <div>
-              <% @needs.each do |need| %>
-              <%= render need %> 
+              <% @kits.each do |kit| %>
+                <div class="">
+                    <%= link_to kit_path(kit) do %>
+                        <%= image_tag kit.image, class: "kit-img" %>
+                    <% end %>
+                    <h3 class="kit_name"><%= kit.name %></h3>
+                </div>
               <% end %>
             </div>
+            <div class="capsules_link">
+            <%= link_to "+ Tous les kits numériques", kits_path %>
+            </div>
+
         </section>
 
         <section class="home-title">

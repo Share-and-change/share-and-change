@@ -24,7 +24,6 @@
     }
     
     &:nth-of-type(2) div > div {
-        flex-basis: 50%;
         a{
             transition: transform 0.20s ease-out;
             &:hover{
@@ -61,4 +60,13 @@
 
 .thanks_contact{
     font-size: clamp(var(--min-p-font-size-rem), var(--fluid-font-size-p-rem), var(--max-p-font-size-rem));
+}
+
+.kit_name{
+    font-family: 'Questrial', sans-serif;
+    font-size: 20px;
+
+}
+.kit-img{
+    max-width: 240px;
 }
